@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/31 14:15:10 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/11 09:43:44 by mrolain          ###   ########.fr       */
+/*   Created: 2024/06/14 12:18:18 by mrolain           #+#    #+#             */
+/*   Updated: 2024/06/14 15:50:24 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int main(int argc, const char *argv[])
+void	swap_a(t_list *stack_a)
 {
-	if (argc < 2)
-		error_message(1);
-	else if (argc == 2)
-		arg(ft_split(argv[1], ' '));
-	else
-		arg(argv + 1);
-	return (0);
-} 
+	t_list	*swap;
+	int		temp;
+	
+	swap = stack_a -> next;
+	temp = stack_a -> number;
+	stack_a -> number = swap -> number;
+	swap -> number = temp;
+	write(1, "sa\n", 3);
+}
