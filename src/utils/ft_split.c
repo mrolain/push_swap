@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:17:36 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/11 09:28:24 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/17 14:21:53 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ char	*mallocator(const char *s, char c)
 const char	**ft_split(char const *s, char c)
 {
 	const char	**tab;
-	int		i;
-	int		nb;
+	int			i;
+	int			nb;
 
 	i = 0;
 	nb = count_words(s, c);

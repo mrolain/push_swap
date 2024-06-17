@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 15:59:51 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/17 14:24:20 by mrolain          ###   ########.fr       */
+/*   Created: 2024/06/17 09:34:11 by mrolain           #+#    #+#             */
+/*   Updated: 2024/06/17 14:22:52 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ra(t_list **stack_a)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*last;
+	int	i;
 
-	last = ft_lstlast(*stack_a);
-	last -> next = *stack_a;
-	(*stack_a) = (*stack_a)-> next;
-	last -> next -> next = NULL;
-	write(1, "ra\n", 3);
+	i = 0;
+	while (lst)
+	{
+		lst = lst -> next;
+		i++;
+	}
+	return (i);
 }

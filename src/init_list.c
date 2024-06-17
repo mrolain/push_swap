@@ -6,13 +6,13 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 12:39:20 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/14 14:46:41 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/17 14:00:04 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_list	*ft_lstnew(int	number)
+t_list	*ft_lstnew(int number)
 {
 	t_list	*new;
 
@@ -29,7 +29,7 @@ t_list	*init_list(const char **argv, int argc)
 	t_list	*stack_a;
 	t_list	*current;
 	int		i;
-	
+
 	i = 0;
 	stack_a = ft_lstnew(ft_atoi(argv[i++]));
 	current = stack_a;

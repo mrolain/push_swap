@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:34:40 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/11 09:56:59 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/17 13:58:09 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ void	arg(const char **arr)
 		if (ft_isoverflow(arr[i]) == 0)
 			error_message(4);
 		i++;
-	}	
+	}
 	dup_check(arr);
 }

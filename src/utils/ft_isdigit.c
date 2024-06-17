@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:23:33 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/11 09:34:26 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/17 14:22:09 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isdigit(int c)
 int	ft_isnumber(const char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	if (str[i] == '-')
 		i++;

@@ -6,11 +6,11 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:16:52 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/14 16:27:39 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/17 14:30:50 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
 # include <stdio.h>
@@ -20,7 +20,7 @@
 
 typedef struct s_list
 {
-	int		number;
+	int				number;
 	struct s_list	*next;
 }	t_list;
 
@@ -34,11 +34,19 @@ int			ft_isoverflow(const char *str);
 int			ft_atoi(const char *nptr);
 void		error_message(int error);
 t_list		*init_list(const char **argv, int argc);
-void		swap_ab(t_list *stack_a, t_list *stack_b);
-void		swap_b(t_list *stack_b);
-void		swap_a(t_list *stack_a);
 t_list		*ft_lstlast(t_list *lst);
-void		rotate_b(t_list **stack_b);
-void		rotate_a(t_list **stack_a);
+int			ft_lstsize(t_list *lst);
+t_list		*ft_lstnew(int number);
+void		rb(t_list **stack_b);
+void		ra(t_list **stack_a);
+void		rr(t_list **stack_a, t_list **stack_b);
+void		ss(t_list *stack_a, t_list *stack_b);
+void		sb(t_list *stack_b);
+void		sa(t_list *stack_a);
+void		rra(t_list **stack_a);
+void		rrr(t_list **stack_a, t_list **stack_b);
+void		rrb(t_list **stack_b);
+void		pa(t_list **stack_a, t_list **stack_b);
+void		pb(t_list **stack_b, t_list **stack_a);
 
 #endif

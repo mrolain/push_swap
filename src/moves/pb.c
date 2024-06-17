@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 15:59:51 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/17 14:24:20 by mrolain          ###   ########.fr       */
+/*   Created: 2024/06/17 13:42:27 by mrolain           #+#    #+#             */
+/*   Updated: 2024/06/17 14:26:48 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ra(t_list **stack_a)
+void	pb(t_list **stack_b, t_list **stack_a)
 {
-	t_list	*last;
+	t_list	*temp;
 
-	last = ft_lstlast(*stack_a);
-	last -> next = *stack_a;
-	(*stack_a) = (*stack_a)-> next;
-	last -> next -> next = NULL;
-	write(1, "ra\n", 3);
+	temp = *stack_b;
+	(*stack_b) = (*stack_b)-> next;
+	temp -> next = *stack_a;
+	(*stack_a) = temp;
+	write(1, "pb\n", 3);
 }
