@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:15:10 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/17 14:49:42 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/19 14:22:23 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,29 @@ void	printus(t_list **stack_a, t_list **stack_b)
 	}
 }
 
+void	free_list(t_list **stack)
+{
+	t_list	*current;
+	t_list	*temp;
+
+	current = *stack;
+	while (current)
+	{
+		temp = current -> next;
+		free (current);
+		current = temp;
+	}
+	*stack = NULL;
+}
+
 int	main(int argc, const char *argv[])
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
+	t_list		*stack_a;
+	t_list		*stack_b;
+	const char	**test;
 
 	stack_b = NULL;
+	test = ft_split(argv[1], ' ');
 	if (argc < 2)
 	{
 		stack_a = NULL;
@@ -44,38 +61,41 @@ int	main(int argc, const char *argv[])
 	}
 	else if (argc == 2)
 	{
-		arg(ft_split(argv[1], ' '));
-		stack_a = init_list(ft_split(argv[1], ' '), count_words(argv[1], ' '));
+		arg(test);
+		stack_a = init_list(test, count_words(argv[1], ' '));
 	}
 	else
 	{
 		arg(argv + 1);
 		stack_a = init_list(argv + 1, argc - 1);
 	}
-	printus(&stack_a, &stack_b);
-	pa(&stack_a, &stack_b);
-	pa(&stack_a, &stack_b);
-	pa(&stack_a, &stack_b);
-	printus(&stack_a, &stack_b);
-	pb(&stack_b, &stack_a);
-	printus(&stack_a, &stack_b);
-	ra(&stack_a);
-	printus(&stack_a, &stack_b);
-	rb(&stack_b);
-	printus(&stack_a, &stack_b);
-	rr(&stack_a, &stack_b);
-	printus(&stack_a, &stack_b);
-	rra(&stack_a);
-	printus(&stack_a, &stack_b);
-	rrb(&stack_b);
-	printus(&stack_a, &stack_b);
-	rrr(&stack_a, &stack_b);
-	printus(&stack_a, &stack_b);
-	sa(stack_a);
-	printus(&stack_a, &stack_b);
-	sb(stack_b);
-	ss(stack_a, stack_b);
-	printus(&stack_a, &stack_b);
-	exit(0);
+	sorter(&stack_a);	
+	// printus(&stack_a, &stack_b);
+	// pa(&stack_a, &stack_b);
+	// pa(&stack_a, &stack_b);
+	// pa(&stack_a, &stack_b);
+	// printus(&stack_a, &stack_b);
+	// pb(&stack_b, &stack_a);
+	// printus(&stack_a, &stack_b);
+	// ra(&stack_a);
+	// printus(&stack_a, &stack_b);
+	// rb(&stack_b);
+	// printus(&stack_a, &stack_b);
+	// rr(&stack_a, &stack_b);
+	// printus(&stack_a, &stack_b);
+	// rra(&stack_a);
+	// printus(&stack_a, &stack_b);
+	// rrb(&stack_b);
+	// printus(&stack_a, &stack_b);
+	// rrr(&stack_a, &stack_b);
+	// printus(&stack_a, &stack_b);
+	// sa(stack_a);
+	// printus(&stack_a, &stack_b);
+	// sb(stack_b);
+	// ss(stack_a, stack_b);
+	// printus(&stack_a, &stack_b);
+	// exit(0);
+	free_list(&stack_a);
+	free_list(&stack_b);
 	return (0);
 }

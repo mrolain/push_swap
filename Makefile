@@ -6,7 +6,7 @@
 #    By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 09:22:28 by mrolain           #+#    #+#              #
-#    Updated: 2024/06/17 14:34:41 by mrolain          ###   ########.fr        #
+#    Updated: 2024/06/19 13:33:19 by mrolain          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS =	./src/main.c \
 		./src/utils/ft_lstlast.c \
 		./src/utils/ft_atoi.c \
 		./src/utils/ft_lstsize.c \
+		./src/is_sorted.c \
 		./src/moves/sa.c \
 		./src/moves/sb.c \
 		./src/moves/ss.c \
@@ -35,6 +36,9 @@ SRCS =	./src/main.c \
 		./src/moves/rrr.c \
 		./src/moves/pa.c \
 		./src/moves/pb.c \
+		./src/sorting/sort_two.c \
+		./src/sorting/sort_three.c \
+		./src/sorting/sorter.c \
 		
 OBJS = ${SRCS:.c=.o}
 
