@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:08:18 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/17 14:26:14 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/20 15:33:54 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	rrb(t_list **stack_b)
 	t_list	*last;
 	int		i;
 
+	if (ft_lstsize(*stack_b) < 2)
+		return ;
 	current = *stack_b;
 	i = ft_lstsize(*stack_b);
 	while (i != 2)

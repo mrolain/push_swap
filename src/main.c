@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:15:10 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/19 14:22:23 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/20 17:08:07 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,12 @@ int	main(int argc, const char *argv[])
 	const char	**test;
 
 	stack_b = NULL;
-	test = ft_split(argv[1], ' ');
+	test = NULL;
 	if (argc < 2)
-	{
-		stack_a = NULL;
 		error_message(1);
-	}
 	else if (argc == 2)
 	{
+		test = ft_split(argv[1], ' ');
 		arg(test);
 		stack_a = init_list(test, count_words(argv[1], ' '));
 	}
@@ -69,32 +67,7 @@ int	main(int argc, const char *argv[])
 		arg(argv + 1);
 		stack_a = init_list(argv + 1, argc - 1);
 	}
-	sorter(&stack_a);	
-	// printus(&stack_a, &stack_b);
-	// pa(&stack_a, &stack_b);
-	// pa(&stack_a, &stack_b);
-	// pa(&stack_a, &stack_b);
-	// printus(&stack_a, &stack_b);
-	// pb(&stack_b, &stack_a);
-	// printus(&stack_a, &stack_b);
-	// ra(&stack_a);
-	// printus(&stack_a, &stack_b);
-	// rb(&stack_b);
-	// printus(&stack_a, &stack_b);
-	// rr(&stack_a, &stack_b);
-	// printus(&stack_a, &stack_b);
-	// rra(&stack_a);
-	// printus(&stack_a, &stack_b);
-	// rrb(&stack_b);
-	// printus(&stack_a, &stack_b);
-	// rrr(&stack_a, &stack_b);
-	// printus(&stack_a, &stack_b);
-	// sa(stack_a);
-	// printus(&stack_a, &stack_b);
-	// sb(stack_b);
-	// ss(stack_a, stack_b);
-	// printus(&stack_a, &stack_b);
-	// exit(0);
+	sorter(&stack_a, &stack_b);
 	free_list(&stack_a);
 	free_list(&stack_b);
 	return (0);

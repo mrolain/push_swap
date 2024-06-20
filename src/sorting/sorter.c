@@ -6,13 +6,13 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 11:33:38 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/19 14:20:31 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/20 17:11:25 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sorter(t_list **stack_a)
+void	sorter(t_list **stack_a, t_list **stack_b)
 {
 	int	i;
 
@@ -23,8 +23,6 @@ void	sorter(t_list **stack_a)
 		sort_two(stack_a);
 	else if (i == 3)
 		sort_three(stack_a);
-	// else if (i == 5)
-	// 	sort_five(&stack_a);
-	// else if (i > 5)
-	// 	big_sort(&stack_a, &stack_b);
+	else if (i == 5 || i == 4)
+		sort_f(stack_a, stack_b);
 }

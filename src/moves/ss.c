@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 15:44:05 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/17 14:23:59 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/20 15:34:12 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static void	swap_a_(t_list *stack_a)
 	t_list	*swap;
 	int		temp;
 
+	if (ft_lstsize(stack_a) < 2)
+		return ;
 	swap = stack_a -> next;
 	temp = stack_a -> number;
 	stack_a -> number = swap -> number;
@@ -28,6 +30,8 @@ static void	swap_b_(t_list *stack_b)
 	t_list	*swap;
 	int		temp;
 
+	if (ft_lstsize(stack_b) < 2)
+		return ;
 	swap = stack_b -> next;
 	temp = stack_b -> number;
 	stack_b -> number = swap -> number;

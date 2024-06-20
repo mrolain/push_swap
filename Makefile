@@ -6,7 +6,7 @@
 #    By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 09:22:28 by mrolain           #+#    #+#              #
-#    Updated: 2024/06/19 13:33:19 by mrolain          ###   ########.fr        #
+#    Updated: 2024/06/20 12:15:20 by mrolain          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,8 @@ SRCS =	./src/main.c \
 		./src/sorting/sort_two.c \
 		./src/sorting/sort_three.c \
 		./src/sorting/sorter.c \
+		./src/sorting/index_check.c \
+		./src/sorting/sort_f.c \
 		
 OBJS = ${SRCS:.c=.o}
 

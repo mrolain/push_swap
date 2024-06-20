@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:16:52 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/19 13:33:02 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/20 16:27:52 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,14 @@ void		sa(t_list *stack_a);
 void		rra(t_list **stack_a);
 void		rrr(t_list **stack_a, t_list **stack_b);
 void		rrb(t_list **stack_b);
-void		pa(t_list **stack_a, t_list **stack_b);
-void		pb(t_list **stack_b, t_list **stack_a);
+void		pa(t_list **stack_b, t_list **stack_a);
+void		pb(t_list **stack_a, t_list **stack_b);
 void		is_sorted(t_list **stack_a);
 void		sort_two(t_list **stack_a);
 void		sort_three(t_list **stack_a);
-void		sorter(t_list **stack_a);
+void		sorter(t_list **stack_a, t_list **stack_b);
+int			lowest(t_list **stack_a);
+void		sort_f(t_list **stack_a, t_list **stack_b);
+void		printus(t_list **stack_a, t_list **stack_b);
 
 #endif

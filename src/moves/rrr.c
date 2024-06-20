@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:09:04 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/17 14:26:31 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/20 15:34:00 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static void	rrb_(t_list **stack_b)
 	t_list	*last;
 	int		i;
 
+	if (ft_lstsize(*stack_b) < 2)
+		return ;
 	current = *stack_b;
 	i = ft_lstsize(*stack_b);
 	while (i != 2)
@@ -37,6 +39,8 @@ static void	rra_(t_list **stack_a)
 	t_list	*last;
 	int		i;
 
+	if (ft_lstsize(*stack_a) < 2)
+		return ;
 	current = *stack_a;
 	i = ft_lstsize(*stack_a);
 	while (i != 2)
