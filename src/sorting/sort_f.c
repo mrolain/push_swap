@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 14:32:45 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/20 17:14:46 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/26 15:57:40 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,5 @@ void	sort_f(t_list **stack_a, t_list **stack_b)
 	sort_a(stack_a);
 	pa(stack_a, stack_b);
 	pa(stack_a, stack_b);
-	printus(stack_a, stack_b);
 	is_sorted(stack_a);
 }

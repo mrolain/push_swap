@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 12:39:20 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/17 14:00:04 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/26 15:37:12 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstnew(int number)
 	if (!new)
 		return (NULL);
 	new -> number = number;
+	new -> index = -1;
 	new -> next = NULL;
 	return (new);
 }

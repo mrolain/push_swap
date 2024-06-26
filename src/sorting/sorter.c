@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 11:33:38 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/20 17:11:25 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/26 15:48:17 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,9 @@ void	sorter(t_list **stack_a, t_list **stack_b)
 		sort_three(stack_a);
 	else if (i == 5 || i == 4)
 		sort_f(stack_a, stack_b);
+	else
+	{
+		init_index(*stack_a);
+		radix_sort(stack_a, stack_b, i);
+	}
 }

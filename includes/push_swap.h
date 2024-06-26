@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:16:52 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/20 16:27:52 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/26 15:47:27 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_list
 {
 	int				number;
 	struct s_list	*next;
+	int				index;
 }	t_list;
 
 const char	**ft_split(char const *s, char c);
@@ -52,8 +53,12 @@ void		is_sorted(t_list **stack_a);
 void		sort_two(t_list **stack_a);
 void		sort_three(t_list **stack_a);
 void		sorter(t_list **stack_a, t_list **stack_b);
-int			lowest(t_list **stack_a);
+t_list		*min_value(t_list *stack_a);
 void		sort_f(t_list **stack_a, t_list **stack_b);
 void		printus(t_list **stack_a, t_list **stack_b);
+int			lowest(t_list **stack_a);
+void		init_index(t_list *stack_a);
+void		radix_sort(t_list **stack_a, t_list **stack_b, int size);
+int			is_simple_sorted(t_list **stack_a);
 
 #endif

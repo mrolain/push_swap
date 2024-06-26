@@ -6,30 +6,30 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:15:10 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/20 17:08:07 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/26 15:50:25 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	printus(t_list **stack_a, t_list **stack_b)
-{
-	t_list	*current_a;
-	t_list	*current_b;
-
-	current_a = *stack_a;
-	current_b = *stack_b;
-	while (current_a)
-	{
-		printf("\e[4;1;32mcurrent a = %d\e[0m\n", current_a -> number);
-		current_a = current_a -> next;
-	}
-	while (current_b)
-	{
-		printf("\e[4;1;36mcurrent b = %d\e[0m\n", current_b -> number);
-		current_b = current_b -> next;
-	}
-}
+// void	printus(t_list **stack_a, t_list **stack_b)
+// {
+// 	t_list	*current_a;
+// 	t_list	*current_b;
+//
+// 	current_a = *stack_a;
+// 	current_b = *stack_b;
+// 	while (current_a)
+// 	{
+// 		printf("\e[4;1;32mcurrent a = %d\e[0m\n", current_a -> number);
+// 		current_a = current_a -> next;
+// 	}
+// 	while (current_b)
+// 	{
+// 		printf("\e[4;1;36mcurrent b = %d\e[0m\n", current_b -> index);
+// 		current_b = current_b -> next;
+// 	}
+// }
 
 void	free_list(t_list **stack)
 {
@@ -53,6 +53,7 @@ int	main(int argc, const char *argv[])
 	const char	**test;
 
 	stack_b = NULL;
+	stack_a = NULL;
 	test = NULL;
 	if (argc < 2)
 		error_message(1);
