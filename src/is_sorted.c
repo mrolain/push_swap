@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 11:00:41 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/20 17:15:14 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/06/27 11:55:31 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void	is_sorted(t_list **stack_a)
 		else
 			return ;
 	}
-	write(1, "\e[1;32mOK\n", 10);
 	exit (0);
 }

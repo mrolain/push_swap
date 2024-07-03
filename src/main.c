@@ -6,7 +6,7 @@
 /*   By: mrolain <mrolain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:15:10 by mrolain           #+#    #+#             */
-/*   Updated: 2024/06/26 15:50:25 by mrolain          ###   ########.fr       */
+/*   Updated: 2024/07/03 14:10:17 by mrolain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int argc, const char *argv[])
 	stack_a = NULL;
 	test = NULL;
 	if (argc < 2)
-		error_message(1);
+		error_message(5);
 	else if (argc == 2)
 	{
 		test = ft_split(argv[1], ' ');
@@ -68,6 +68,7 @@ int	main(int argc, const char *argv[])
 		arg(argv + 1);
 		stack_a = init_list(argv + 1, argc - 1);
 	}
+	is_sorted(&stack_a);
 	sorter(&stack_a, &stack_b);
 	free_list(&stack_a);
 	free_list(&stack_b);
